@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARC Solutions</title>
+    <meta name="description" content="ARC Solutions - Premium Graphic Design, STEM Home Teaching, AI Prompt Engineering, Programming, Ethical Hacking & Phone Protection, and MS Office Mastery.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/futuristic.css">
+</head>
+<body class="cyber-theme">
+
+    <!-- Interactive Background Canvas -->
+    <canvas id="cyber-canvas"></canvas>
+    
+    <!-- Ambient Glow Effects -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="cyber-header" id="header">
+        <div class="nav-container">
+            <a href="#hero" class="brand-logo">
+                <div class="logo-ring">
+                    <img src="assets/images/logo.jpeg" alt="ARC Solutions Logo" class="brand-img">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">ARC <span class="cyan-neon">SOLUTIONS</span></span>
+                    <span class="brand-tagline">DOORSTEP SOLUTIONS</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#services" class="nav-link"><i class="fa-solid fa-microchip"></i> Services</a>
+                <a href="#portfolio" class="nav-link"><i class="fa-solid fa-palette"></i> Portfolio</a>
+                <a href="#prompt-lab" class="nav-link"><i class="fa-solid fa-robot"></i> AI Lab</a>
+                <a href="#security" class="nav-link"><i class="fa-solid fa-shield-halved"></i> Phone Security</a>
+                <a href="#teaching" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> STEM Tutoring</a>
+                <a href="#terminal-section" class="nav-link"><i class="fa-solid fa-terminal"></i> Terminal</a>
+                <a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="sfx-toggle reactive-btn" id="sfx-btn" title="Toggle Sound Effects">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+                <a href="https://wa.me/237673286459" target="_blank" rel="noopener noreferrer" class="cyber-btn nav-wa-btn reactive-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Chat Now
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hud-badge glitch-text" data-text="SYSTEM OPERATIONAL">
+                    <span class="pulse-dot"></span> ARC SOLUTIONS TECH HUB ONLINE
+                </div>
+                <h1 class="hero-title">
+                    Empowering Tech, <br>
+                    <span class="neon-text-blue">Designing</span> The <span class="neon-text-cyan">Future</span>
+                </h1>
+                <p class="hero-description">
+                    Welcome to <strong>ARC Solutions</strong> your ultimate multi-disciplinary digital powerhouse. We offer high-impact Graphic Design, Expert STEM Tutoring, AI Prompt Engineering, Software Programming, Phone Cyber Protection, and MS Office Mastery.
+                </p>
+
+                <!-- Hero Action Buttons -->
+                <div class="hero-buttons">
+                    <a href="https://wa.me/237673286459?text=Hi%20ARC%20Solutions,%20I'm%20interested%20in%20working%20with%20you!" target="_blank" class="cyber-btn primary-btn reactive-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Instant WhatsApp DM
+                        <span class="btn-glow"></span>
+                    </a>
+                    <a href="https://wa.me/673286459" target="_blank" class="cyber-btn secondary-btn reactive-btn">
+                        <i class="fa-solid fa-store"></i> Browse Catalog
+                        <span class="btn-glow"></span>
+                    </a>
+                    <a href="#services" class="cyber-btn outline-btn reactive-btn">
+                        <i class="fa-solid fa-sliders"></i> Our Services
+                    </a>
+                </div>
+
+                <!-- Stats HUD Bar -->
+                <div class="hud-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">Core Tech Domains</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">WhatsApp Support</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Hologram Card -->
+            <div class="hero-profile-container">
+                <div class="holo-card-wrapper">
+                    <div class="holo-card-frame">
+                        <div class="scanline"></div>
+                        <div class="holo-corner top-left"></div>
+                        <div class="holo-corner top-right"></div>
+                        <div class="holo-corner bottom-left"></div>
+                        <div class="holo-corner bottom-right"></div>
+                        
+                        <div class="profile-img-box">
+                            <img src="assets/images/logo.jpeg" alt="ARC Solutions Founder" class="profile-img">
+                            <div class="holo-overlay"></div>
+                        </div>
+
+                        <div class="profile-info-hud">
+                            <h3>ARC SOLUTIONS</h3>
+                            <p class="role-title"><i class="fa-solid fa-user-gear"></i> Tech Specialist & Educator</p>
+                            <div class="skill-tags">
+                                <span class="tag">Design</span>
+                                <span class="tag">AI</span>
+                                <span class="tag">Coding</span>
+                                <span class="tag">Security</span>
+                                <span class="tag">Tutoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section section-padding" id="services">
+        <div class="section-header">
+            <span class="section-subtitle">WHAT WE DO</span>
+            <h2 class="section-title">Specialized <span class="cyan-neon">Services</span></h2>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="services-grid">
+            <!-- Service 1: Graphic Designing -->
+            <div class="service-card cyber-glass" data-tilt>
+                <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="service-hud-id">SVC-01</div>
+                <h3>Graphic Designing</h3>
+                <p>Custom flyers, birthday posters, corporate fintech banners, business branding, social media graphics, and print-ready HD artwork.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check"></i> High Resolution & Print Ready</li>
+                    <li><i class="fa-solid fa-check"></i> Birthday & Event Flyers</li>
+                    <li><i class="fa-solid fa-check"></i> Corporate & Fintech Branding</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="#portfolio" class="card-btn secondary reactive-btn">View Samples</a>
+                    <a href="https://wa.me/237673286459?text=Hi%20ARC%20Solutions,%20I%20need%20a%20Graphic%20Design%20for%20my%20project." target="_blank" class="card-btn primary reactive-btn">Order Design</a>
+                </div>
+            </div>
+
+            <!-- Service 2: Home Teaching -->
+            <div class="service-card cyber-glass" data-tilt>
+                <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="service-hud-id">SVC-02</div>
+                <h3>Home Teaching (STEM)</h3>
+                <p>Expert one-on-one home and online tutoring in <strong>Mathematics</strong>, <strong>Physics</strong>, and <strong>Computer Science</strong> for students.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check"></i> Pure & Applied Mathematics</li>
+                    <li><i class="fa-solid fa-check"></i> Classical & Modern Physics</li>
+                    <li><i class="fa-solid fa-check"></i> Computer Science & Logic</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="#teaching" class="card-btn secondary reactive-btn">View Details</a>
+                    <a href="https://wa.me/237673286459?text=Hi%20ARC%20Solutions,%20I'm%20interested%20in%20Home%20Teaching%20(Maths/Physics/Computer%20Science)." target="_blank" class="card-btn primary reactive-btn">Book Lesson</a>
+                </div>
+            </div>
+
+            <!-- Service 3: AI Prompt Engineer -->
+            <div class="service-card cyber-glass" data-tilt>
+                <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="service-hud-id">SVC-03</div>
+                <h3>AI Prompt Engineering</h3>
+                <p>Mastering prompt crafting for ChatGPT, Midjourney, Claude, & Gemini. Boost productivity, build AI custom instructions, & automate tasks.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check"></i> Custom System Prompts</li>
+                    <li><i class="fa-solid fa-check"></i> Text & Image AI Engineering</li>
+                    <li><i class="fa-solid fa-check"></i> AI Workflow Optimization</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="#prompt-lab" class="card-btn secondary reactive-btn">Try Prompt Lab</a>
+                    <a href="https://wa.me/237673286459?text=Hi%20ARC%20Solutions,%20I%20need%20AI%20Prompt%20Engineering%20assistance." target="_blank" class="card-btn primary reactive-btn">Consult AI</a>
+                </div>
+            </div>
+
+            <!-- Service 4: Programming -->
+            <div class="service-card cyber-glass" data-tilt>
+                <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                <div class="service-hud-id">SVC-04</div>
+                <h3>Software & Web Programming</h3>
+                <p>Responsive websites, automation scripts, database setups, and customized software development.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check"></i> HTML, CSS, JavaScript, React</li>
+                    <li><i class="fa-solid fa-check"></i> Python & Automation Tools</li>
+                    <li><i class="fa-solid fa-check"></i> Web & Mobile Frontends</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="#terminal-section" class="card-btn secondary reactive-btn">Open Terminal</a>
+                    <a href="https://wa.me/237673286459?text=Hi%20ARC%20Solutions,%20I%20have%20a%20programming/coding%20project." target="_blank" class="card-btn primary reactive-btn">Hire Programmer</a>
+                </div>
+            </div>
+
+            <!-- Service 5: Ethical Hacking & Phone Protection -->
+            <div class="service-card cyber-glass" data-tilt>
+                <div class="service-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                <div class="service-hud-id">SVC-05</div>
+                <h3>Ethical Hacking & Phone Protection</h3>
+                <p>Learn ethical security tricks, audit your smartphone security, remove spyware/malware, and prevent phone hacking attempts.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check"></i> Smartphone Security Audit</li>
+                    <li><i class="fa-solid fa-check"></i> Spyware & Malware Removal</li>
+                    <li><i class="fa-solid fa-check"></i> WhatsApp & Account Protection</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="#security" class="card-btn secondary reactive-btn">Audit My Phone</a>
+                    <a href="https://wa.me/237673286459?text=Hi%20ARC%20Solutions,%20I%20need%20help%20securing%20my%20phone/protecting%20my%20accounts." target="_blank" class="card-btn primary reactive-btn">Get Shielded</a>
+                </div>
+            </div>
+
+            <!-- Service 6: MS Office Skills House -->
+            <div class="service-card cyber-glass" data-tilt>
+                <div class="service-icon"><i class="fa-solid fa-file-excel"></i></div>
+                <div class="service-hud-id">SVC-06</div>
+                <h3>Microsoft Office Skills House</h3>
+                <p>Comprehensive training & formatting for Word documents, advanced Excel formulas & data analysis, dynamic PowerPoint, & Access databases.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check"></i> Advanced Excel & Formulas</li>
+                    <li><i class="fa-solid fa-check"></i> Professional Word Formatting</li>
+                    <li><i class="fa-solid fa-check"></i> High-Impact PowerPoint Pitch Decks</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="#office-house" class="card-btn secondary reactive-btn">Modules</a>
+                    <a href="https://wa.me/237673286459?text=Hi%20ARC%20Solutions,%20I%20want%20to%20learn/need%20help%20with%20Microsoft%20Office." target="_blank" class="card-btn primary reactive-btn">Join House</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Section (Real Sample Designs) -->
+    <section class="portfolio-section section-padding" id="portfolio">
+        <div class="section-header">
+            <span class="section-subtitle">SHOWCASE & CREATIONS</span>
+            <h2 class="section-title">Design <span class="cyan-neon">Portfolio</span></h2>
+            <p class="section-desc">Sample designs crafted by ARC Solutions. Click any image to expand and view in full HD!</p>
+            <div class="title-line"></div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="gallery-filters">
+            <button class="filter-btn active reactive-btn" data-filter="all">All Designs</button>
+            <button class="filter-btn reactive-btn" data-filter="flyer">Celebration Flyers</button>
+            <button class="filter-btn reactive-btn" data-filter="corporate">Corporate & Banking</button>
+            <button class="filter-btn reactive-btn" data-filter="business">Business & Services</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+            <!-- Design 1: Birthday Flyer -->
+            <div class="gallery-item" data-category="flyer">
+                <div class="gallery-card cyber-glass">
+                    <div class="gallery-img-box">
+                        <img src="assets/images/design1_birthday.jpg" alt="Happy Birthday Kedia Poster" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Happy Birthday Poster</h4>
+                        <p class="cat-tag">Personal & Event Design</p>
+                        <a href="https://wa.me/237673286459?text=Hi%20ARC%20Solutions,%20I%20like%20the%20Happy%20Birthday%20Kedia%20design!%20Can%20you%20make%20one%20for%20me?" target="_blank" class="order-link-btn reactive-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order Similar Flyer
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design 2: TerahBank Compliance -->
+            <div class="gallery-item" data-category="corporate">
+                <div class="gallery-card cyber-glass">
+                    <div class="gallery-img-box">
+                        <img src="assets/images/design2_terah_compliance.jpg" alt="TerahBank Compliance Poster" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>TerahBank Compliance & Trust Poster</h4>
+                        <p class="cat-tag">Fintech & Corporate Design</p>
+                        <a href="https://wa.me/237673286459?text=Hi%20ARC%20Solutions,%20I%20like%20the%20TerahBank%20Compliance%20flyer!%20I'd%20like%20a%20corporate%20design." target="_blank" class="order-link-btn reactive-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order Similar Flyer
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design 3: Zion Business Group -->
+            <div class="gallery-item" data-category="business">
+                <div class="gallery-card cyber-glass">
+                    <div class="gallery-img-box">
+                        <img src="assets/images/design3_zion.jpg" alt="Zion Business Group Poster" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Zion Business Group Infographic</h4>
+                        <p class="cat-tag">Business & Consultancy Poster</p>
+                        <a href="https://wa.me/237673286459?text=Hi%20ARC%20Solutions,%20I%20saw%20the%20Zion%20Business%20Group%20design.%20I%20need%20a%20business%20services%20poster." target="_blank" class="order-link-btn reactive-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order Similar Flyer
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design 4: TerahBank Digital Savings Platform -->
+            <div class="gallery-item" data-category="corporate">
+                <div class="gallery-card cyber-glass">
+                    <div class="gallery-img-box">
+                        <img src="assets/images/design4_terah_app.jpg" alt="TerahBank Savings Platform Launch" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>TerahBank App Reveal Flyer</h4>
+                        <p class="cat-tag">Product Reveal & Mobile App Banner</p>
+                        <a href="https://wa.me/237673286459?text=Hi%20ARC%20Solutions,%20I%20love%20the%20TerahBank%20App%20Reveal%20design.%20I%20want%20a%20product%20launch%20flyer." target="_blank" class="order-link-btn reactive-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order Similar Flyer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog-cta-box">
+            <h3>Want to see more of our design catalog?</h3>
+            <p>Explore full high-resolution portfolio albums directly on our official WhatsApp Catalog!</p>
+            <a href="https://wa.me/237673286459" target="_blank" class="cyber-btn primary-btn reactive-btn">
+                <i class="fa-solid fa-images"></i> Visit Official WhatsApp Catalog
+            </a>
+        </div>
+    </section>
+
+    <!-- Interactive Tool 1: AI Prompt Engineering Lab -->
+    <section class="prompt-lab-section section-padding" id="prompt-lab">
+        <div class="section-header">
+            <span class="section-subtitle"> INTERACTIVE AI TOOL</span>
+            <h2 class="section-title">AI Prompt <span class="cyan-neon">Enhancer Sandbox</span></h2>
+            <p class="section-desc">Experience how ARC Solutions turns basic user prompts into professional high-converting AI prompts!</p>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="prompt-sandbox-container cyber-glass">
+            <div class="sandbox-header">
+                <div class="hud-indicator"><span class="pulse-dot"></span> PROMPT ENGINE v2.4 ONLINE</div>
+                <div class="sandbox-controls">
+                    <button class="preset-btn reactive-btn" data-preset="design">Graphic Design Prompt</button>
+                    <button class="preset-btn reactive-btn" data-preset="code">Coding Prompt</button>
+                    <button class="preset-btn reactive-btn" data-preset="study">STEM Study Guide</button>
+                </div>
+            </div>
+
+            <div class="sandbox-body">
+                <div class="input-group">
+                    <label for="user-prompt-input"><i class="fa-solid fa-pen"></i> Enter Simple Idea / Draft Prompt:</label>
+                    <textarea id="user-prompt-input" rows="3" placeholder="e.g. Create a flyer for a smartphone repair business in Douala..."></textarea>
+                </div>
+
+                <div class="sandbox-actions">
+                    <button id="enhance-prompt-btn" class="cyber-btn primary-btn reactive-btn">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Optimize & Enhance Prompt
+                    </button>
+                </div>
+
+                <div class="output-group">
+                    <label><i class="fa-solid fa-robot"></i> ARC Solutions Engineer-Grade Prompt Result:</label>
+                    <div class="output-box" id="prompt-output-box">
+                        <pre id="prompt-output-text">Click "Optimize & Enhance Prompt" or select a preset to generate engineered prompt...</pre>
+                    </div>
+                    <button id="copy-prompt-btn" class="copy-btn reactive-btn" title="Copy Prompt">
+                        <i class="fa-solid fa-copy"></i> Copy Engineered Prompt
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tool 2: Phone Security Vulnerability Inspector -->
+    <section class="security-section section-padding" id="security">
+        <div class="section-header">
+            <span class="section-subtitle"> ETHICAL HACKING & DEFENSE</span>
+            <h2 class="section-title">Phone <span class="cyan-neon">Security Inspector</span></h2>
+            <p class="section-desc">Audit your device's security status and learn essential tips to stay safe from phone hackers.</p>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="security-grid">
+            <!-- Vulnerability Scanner Card -->
+            <div class="security-card cyber-glass">
+                <div class="sec-card-header">
+                    <i class="fa-solid fa-mobile-screen-button sec-icon"></i>
+                    <h3>Device Protection Diagnostic</h3>
+                </div>
+
+                <form id="sec-quiz-form" class="sec-quiz">
+                    <div class="quiz-step">
+                        <label>1. What operating system is your main phone using?</label>
+                        <select id="sec-os" class="sec-select">
+                            <option value="android">Android Phone (Samsung, Tecno, Xiaomi, etc.)</option>
+                            <option value="ios">Apple iPhone (iOS)</option>
+                        </select>
+                    </div>
+
+                    <div class="quiz-step">
+                        <label>2. Do you install apps outside Google Play Store / App Store (APKs/Downloads)?</label>
+                        <select id="sec-apk" class="sec-select">
+                            <option value="yes">Yes, occasionally or frequently</option>
+                            <option value="no">No, only official app stores</option>
+                        </select>
+                    </div>
+
+                    <div class="quiz-step">
+                        <label>3. Do you click links in random SMS/WhatsApp messages offering free money or prizes?</label>
+                        <select id="sec-links" class="sec-select">
+                            <option value="yes">Yes, sometimes out of curiosity</option>
+                            <option value="no">Never, I delete suspicious links</option>
+                        </select>
+                    </div>
+
+                    <div class="quiz-step">
+                        <label>4. Is Two-Factor Authentication (2FA) enabled on your WhatsApp & Email?</label>
+                        <select id="sec-2fa" class="sec-select">
+                            <option value="no">No, not enabled yet</option>
+                            <option value="yes">Yes, enabled on all key accounts</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="cyber-btn primary-btn reactive-btn btn-full">
+                        <i class="fa-solid fa-shield-virus"></i> Run Security Diagnostic
+                    </button>
+                </form>
+
+                <!-- Diagnostic Results Display -->
+                <div id="sec-result" class="sec-result-box hidden">
+                    <div class="score-circle" id="score-circle">
+                        <span id="score-val">0%</span>
+                        <span class="score-label">SAFETY RATING</span>
+                    </div>
+                    <div id="score-text" class="score-text"></div>
+                    <div id="sec-recommendations" class="sec-recs"></div>
+                    
+                    <a id="sec-wa-link" href="https://wa.me/237673286459?text=Hi%20ARC%20Solutions,%20I%20ran%20the%20Phone%20Security%20Diagnostic%20and%20need%20help%20securing%20my%20phone!" target="_blank" class="cyber-btn warning-btn reactive-btn btn-full">
+                        <i class="fa-brands fa-whatsapp"></i> Get Custom Phone Hardening from ARC Solutions
+                    </a>
+                </div>
+            </div>
+
+            <!-- Essential Phone Defense Tips -->
+            <div class="security-card cyber-glass">
+                <div class="sec-card-header">
+                    <i class="fa-solid fa-lock-open sec-icon"></i>
+                    <h3>6 Golden Rules of Phone Protection</h3>
+                </div>
+
+                <div class="tips-accordion">
+                    <div class="tip-item active">
+                        <div class="tip-title"><i class="fa-brands fa-whatsapp"></i> Lock Your WhatsApp with 2-Step Verification</div>
+                        <div class="tip-content">Go to <em>Settings &gt; Account &gt; Two-Step Verification &gt; Enable</em>. Set a 6-digit PIN so hackers cannot steal your number via SIM swap or SMS intercept.</div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-title"><i class="fa-solid fa-bug"></i> Beware of Unknown APK File Downloads</div>
+                        <div class="tip-content">Third-party APKs downloaded from unauthorized websites often embed trojan keyloggers that transmit banking pins and photos to remote hacker servers.</div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-title"><i class="fa-solid fa-wifi"></i> Avoid Public Unsecured Wi-Fi Networks</div>
+                        <div class="tip-content">Hackers set up "Man-in-the-Middle" rogue Wi-Fi hotspots at public places. Never log into mobile banking or sensitive apps while connected to unknown open Wi-Fi.</div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-title"><i class="fa-solid fa-sim-card"></i> Enable SIM Card Lock Pin</div>
+                        <div class="tip-content">If your phone is stolen, thieves can put your SIM into another device to receive bank OTP codes. Lock your SIM card with a custom PIN under SIM Security settings.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEM Home Teaching Section -->
+    <section class="teaching-section section-padding" id="teaching">
+        <div class="section-header">
+            <span class="section-subtitle"> ACADEMIC EXCELLENCE</span>
+            <h2 class="section-title">Home Teaching <span class="cyan-neon">(Maths, Physics & CS)</span></h2>
+            <p class="section-desc">Structured, student-centric tutoring designed to convert complex concepts into top exam grades!</p>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="teaching-grid">
+            <div class="subject-card cyber-glass">
+                <div class="subj-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+                <h3>Mathematics</h3>
+                <p>From foundational algebra to advanced calculus, coordinate geometry, statistics, and mechanics.</p>
+                <ul class="subj-list">
+                    <li>Algebra & Differential Equations</li>
+                    <li>Calculus & Functions</li>
+                    <li>Probability & Statistics</li>
+                    <li>Trigonometry & Geometry</li>
+                </ul>
+            </div>
+
+            <div class="subject-card cyber-glass">
+                <div class="subj-icon"><i class="fa-solid fa-atom"></i></div>
+                <h3>Physics</h3>
+                <p>Demystifying mechanics, electricity, magnetism, thermodynamics, optics, and modern physics.</p>
+                <ul class="subj-list">
+                    <li>Newtonian Mechanics & Dynamics</li>
+                    <li>Current Electricity & Magnetism</li>
+                    <li>Wave Motion & Optics</li>
+                    <li>Atomic & Nuclear Physics</li>
+                </ul>
+            </div>
+
+            <div class="subject-card cyber-glass">
+                <div class="subj-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3>Computer Science</h3>
+                <p>Algorithms, data structures, programming fundamentals, computer logic, and database management.</p>
+                <ul class="subj-list">
+                    <li>Logic Gates & Boolean Algebra</li>
+                    <li>Algorithms & Flowcharts</li>
+                    <li>Python/C++/Java Basics</li>
+                    <li>Data Organization & Networking</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="teaching-cta-banner cyber-glass">
+            <div class="banner-text">
+                <h3>Ready to boost your academic performance?</h3>
+                <p>Book a flexible home tutoring session or online coaching with ARC Solutions today!</p>
+            </div>
+            <a href="https://wa.me/237673286459?text=Hi%20ARC%20Solutions,%20I'd%20like%20to%20inquire%20about%20Home%20Teaching%20schedules%20and%20rates." target="_blank" class="cyber-btn primary-btn reactive-btn">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Teaching Rates
+            </a>
+        </div>
+    </section>
+
+    <!-- Interactive Tool 3: Cyber Terminal Playground -->
+    <section class="terminal-section section-padding" id="terminal-section">
+        <div class="section-header">
+            <span class="section-subtitle"> INTERACTIVE CONSOLE</span>
+            <h2 class="section-title">Cyber <span class="cyan-neon">Terminal Command Line</span></h2>
+            <p class="section-desc">Type commands to query services, launch tools, or contact ARC Solutions directly in CLI mode!</p>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="terminal-window cyber-glass">
+            <div class="terminal-bar">
+                <div class="term-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="term-title"><i class="fa-solid fa-terminal"></i> arc-solutions@hub:~ (bash)</div>
+            </div>
+
+            <div class="terminal-output" id="term-output">
+                <div class="term-line">ARC SOLUTIONS CONSOLE SYSTEM v3.0.0 [x86_64-pc-windows]</div>
+                <div class="term-line">Type <span class="cmd-highlight">help</span> to see available system commands.</div>
+            </div>
+
+            <div class="terminal-input-row">
+                <span class="term-prompt">arc-solutions$&nbsp;</span>
+                <input type="text" id="term-input" autocomplete="off" placeholder="Type 'help' or 'services'...">
+            </div>
+        </div>
+    </section>
+
+    <!-- MS Office Skills House Section -->
+    <section class="office-section section-padding" id="office-house">
+        <div class="section-header">
+            <span class="section-subtitle"> PRODUCTIVITY MASTERY</span>
+            <h2 class="section-title">Microsoft Office <span class="cyan-neon">Skills House</span></h2>
+            <p class="section-desc">Professional document design, automated spreadsheets, & presentation masterclasses.</p>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="office-grid">
+            <div class="office-card cyber-glass">
+                <div class="off-icon word"><i class="fa-solid fa-file-word"></i></div>
+                <h3>MS Word</h3>
+                <p>Formatting academic theses, legal contracts, business proposals, automated table of contents & indexing.</p>
+            </div>
+            <div class="office-card cyber-glass">
+                <div class="off-icon excel"><i class="fa-solid fa-file-excel"></i></div>
+                <h3>MS Excel</h3>
+                <p>VLOOKUP/XLOOKUP, Pivot Tables, conditional formatting, financial modeling, & interactive dashboards.</p>
+            </div>
+            <div class="office-card cyber-glass">
+                <div class="off-icon powerpoint"><i class="fa-solid fa-file-powerpoint"></i></div>
+                <h3>MS PowerPoint</h3>
+                <p>High-stakes executive pitch decks, custom master slides, morph transitions, & dynamic infographics.</p>
+            </div>
+            <div class="office-card cyber-glass">
+                <div class="off-icon access"><i class="fa-solid fa-database"></i></div>
+                <h3>MS Access</h3>
+                <p>Relational database architecture, custom SQL queries, input forms, & automated inventory reports.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Booking Section -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="section-header">
+            <span class="section-subtitle"> GET IN TOUCH</span>
+            <h2 class="section-title">Contact <span class="cyan-neon">ARC Solutions</span></h2>
+            <p class="section-desc">Reach out for custom graphic designs, home teaching slots, coding projects, or phone security auditing.</p>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="contact-container">
+            <!-- Contact Info Cards -->
+            <div class="contact-info-grid">
+                <a href="https://wa.me/237673286459" target="_blank" class="contact-card cyber-glass reactive-btn">
+                    <div class="c-icon wa"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="c-detail">
+                        <h4>Direct WhatsApp</h4>
+                        <p>+237 673 286 459</p>
+                        <span class="c-badge">Instant Reply</span>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/673286459" target="_blank" class="contact-card cyber-glass reactive-btn">
+                    <div class="c-icon catalog"><i class="fa-solid fa-bag-shopping"></i></div>
+                    <div class="c-detail">
+                        <h4>WhatsApp Catalog</h4>
+                        <p>Browse All Designs & Products</p>
+                        <span class="c-badge">View Portfolio</span>
+                    </div>
+                </a>
+
+                <div class="contact-card cyber-glass">
+                    <div class="c-icon phone"><i class="fa-solid fa-phone"></i></div>
+                    <div class="c-detail">
+                        <h4>Direct Phone Call</h4>
+                        <p>+237 673 286 459</p>
+                        <span class="c-badge">Available Daily</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick WhatsApp Message Builder Form -->
+            <div class="contact-form-box cyber-glass">
+                <h3><i class="fa-solid fa-paper-plane"></i> Send Direct WhatsApp Order / Inquiry</h3>
+                <form id="wa-builder-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="c-name">Your Name:</label>
+                            <input type="text" id="c-name" placeholder="e.g. John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-service">Selected Service:</label>
+                            <select id="c-service" class="sec-select">
+                                <option value="Graphic Designing">Graphic Designing (Flyers/Posters)</option>
+                                <option value="Home Teaching (Maths/Physics/CS)">Home Teaching (Maths, Physics, CS)</option>
+                                <option value="AI Prompt Engineering">AI Prompt Engineering</option>
+                                <option value="Programming Project">Programming & Web Development</option>
+                                <option value="Ethical Hacking & Phone Protection">Phone Security & Protection</option>
+                                <option value="Microsoft Office Skills">Microsoft Office Skills</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-message">Project Details / Message:</label>
+                        <textarea id="c-message" rows="4" placeholder="Describe what you need..." required></textarea>
+                    </div>
+                    <button type="submit" class="cyber-btn primary-btn reactive-btn btn-full">
+                        <i class="fa-brands fa-whatsapp"></i> Launch Message on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="brand-logo">
+                    <img src="assets/images/logo.jpeg" alt="ARC Solutions Logo" class="brand-img">
+                    <span class="brand-title">ARC <span class="cyan-neon">SOLUTIONS</span></span>
+                </div>
+                <p>Your premium multi-disciplinary tech and design hub.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Navigation</h4>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Design Portfolio</a>
+                <a href="#prompt-lab">AI Lab</a>
+                <a href="#security">Phone Security</a>
+                <a href="#teaching">Home Teaching</a>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Official Links</h4>
+                <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/237673286459" target="_blank">+237 673 286 459</a></p>
+                <p><i class="fa-solid fa-store"></i> Catalog: <a href="https://wa.me/673286459" target="_blank">was.me/673286459</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> ARC Solutions. All Rights Reserved. Built with Futuristic Reactive Web Tech.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/237673286459" target="_blank" rel="noopener noreferrer" class="floating-wa-btn reactive-btn" title="Chat with ARC Solutions on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="wa-tooltip">Chat with ARC Solutions</span>
+    </a>
+
+    <!-- Lightbox Modal for Portfolio -->
+    <div id="lightbox-modal" class="lightbox-modal hidden">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Full view">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/prompt-generator.js"></script>
+    <script src="js/security-checker.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
