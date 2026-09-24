@@ -21,7 +21,1141 @@
     <link rel="stylesheet" href="css/futuristic.css">
 </head>
 <body class="cyber-theme">
-<elevenlabs-convai agent-id="agent_9701m1ejx694ffs977pncz5kmwpb"></elevenlabs-convai>
+<!-- =========================================================
+     CUSTOM FLOATING AI SUPPORT WIDGET
+     ElevenLabs Agent:
+     agent_6101m1e66123fff825ccasvj6wbw
+
+     AI PHONE NUMBER:
+     +18312152369
+========================================================= -->
+
+<style>
+  #aiSupportLauncher {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+
+    width: 62px;
+    height: 62px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+
+    cursor: grab;
+    z-index: 999999;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,.30);
+
+    user-select: none;
+    touch-action: none;
+  }
+
+  #aiSupportLauncher:active {
+    cursor: grabbing;
+  }
+
+
+  /* PANEL */
+
+  #aiSupportPanel {
+    position: fixed;
+
+    right: 24px;
+    bottom: 100px;
+
+    width: 360px;
+    max-width: calc(100vw - 24px);
+
+    background: #0f172a;
+    color: white;
+
+    border-radius: 22px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,.1);
+
+    box-shadow: 0 25px 80px rgba(0,0,0,.45);
+
+    z-index: 999998;
+
+    display: none;
+
+    font-family:
+      Arial,
+      Helvetica,
+      sans-serif;
+  }
+
+
+  /* HEADER */
+
+  .aiHeader {
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(
+      135deg,
+      #172554,
+      #312e81
+    );
+  }
+
+  .aiHeaderLeft {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .aiAvatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,.14);
+
+    font-size: 21px;
+  }
+
+  .aiTitle {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .aiSubtitle {
+    margin-top: 3px;
+
+    color: #cbd5e1;
+
+    font-size: 12px;
+  }
+
+  #aiCloseBtn {
+    width: 32px;
+    height: 32px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.1);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+  }
+
+
+  /* BODY */
+
+  .aiBody {
+    padding: 22px 20px 20px;
+
+    text-align: center;
+  }
+
+  .aiMainIcon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+      135deg,
+      #2563eb,
+      #7c3aed
+    );
+
+    font-size: 31px;
+  }
+
+  .aiBody h3 {
+    margin: 0 0 8px;
+
+    font-size: 21px;
+  }
+
+  .aiDescription {
+    margin: 0 auto 20px;
+
+    max-width: 290px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+
+  /* STATUS */
+
+  .aiStatus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 16px;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+  }
+
+  #aiStatusDot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #64748b;
+  }
+
+  #aiStatusDot.connected {
+    background: #22c55e;
+
+    box-shadow: 0 0 12px #22c55e;
+  }
+
+  #aiStatusDot.speaking {
+    background: #38bdf8;
+
+    box-shadow: 0 0 12px #38bdf8;
+  }
+
+
+  /* BUTTONS */
+
+  .aiButton {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 0;
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+  }
+
+  #aiStartCall {
+    background: linear-gradient(
+      135deg,
+      #2563eb,
+      #7c3aed
+    );
+
+    color: white;
+  }
+
+  #aiStartCall:hover {
+    transform: translateY(-1px);
+  }
+
+  #aiEndCall {
+    display: none;
+
+    background: #dc2626;
+
+    color: white;
+  }
+
+
+  /* DIVIDER */
+
+  .aiDivider {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 20px 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+  }
+
+  .aiDivider::before,
+  .aiDivider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: rgba(255,255,255,.1);
+  }
+
+
+  /* PHONE SECTION */
+
+  .aiPhoneBox {
+    padding: 16px;
+
+    border-radius: 14px;
+
+    background: #1e293b;
+
+    border: 1px solid rgba(255,255,255,.06);
+  }
+
+  .aiPhoneLabel {
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+  }
+
+  .aiPhoneNumber {
+    display: block;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: .4px;
+
+    text-decoration: none;
+
+    margin-bottom: 12px;
+  }
+
+  .aiPhoneNumber:hover {
+    text-decoration: underline;
+  }
+
+  #aiPhoneCallBtn {
+    display: block;
+
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: #16a34a;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+  }
+
+  #aiPhoneCallBtn:hover {
+    background: #15803d;
+  }
+
+
+  /* VOICE ANIMATION */
+
+  #aiVoiceBars {
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 4px;
+
+    height: 25px;
+
+    margin-bottom: 14px;
+  }
+
+  .aiBar {
+    width: 4px;
+    height: 8px;
+
+    border-radius: 4px;
+
+    background: #38bdf8;
+
+    animation: aiVoice .8s infinite ease-in-out;
+  }
+
+  .aiBar:nth-child(2) {
+    animation-delay: .1s;
+  }
+
+  .aiBar:nth-child(3) {
+    animation-delay: .2s;
+  }
+
+  .aiBar:nth-child(4) {
+    animation-delay: .3s;
+  }
+
+  .aiBar:nth-child(5) {
+    animation-delay: .4s;
+  }
+
+  @keyframes aiVoice {
+    0%,100% {
+      height: 7px;
+    }
+
+    50% {
+      height: 24px;
+    }
+  }
+
+
+  .aiHint {
+    margin-top: 13px;
+
+    color: #64748b;
+
+    font-size: 10px;
+  }
+
+
+  @media(max-width:480px) {
+
+    #aiSupportLauncher {
+      right: 18px;
+      bottom: 18px;
+    }
+
+    #aiSupportPanel {
+      right: 12px;
+      bottom: 88px;
+
+      width: calc(100vw - 24px);
+    }
+
+  }
+
+</style>
+
+
+<!-- =========================================================
+     FLOATING BUTTON
+========================================================= -->
+
+<button
+  id="aiSupportLauncher"
+  aria-label="Open AI Support"
+>
+  🎙️
+</button>
+
+
+<!-- =========================================================
+     SUPPORT PANEL
+========================================================= -->
+
+<div id="aiSupportPanel">
+
+  <!-- HEADER -->
+
+  <div class="aiHeader">
+
+    <div class="aiHeaderLeft">
+
+      <div class="aiAvatar">
+        🤖
+      </div>
+
+      <div>
+
+        <div class="aiTitle">
+          AI Support
+        </div>
+
+        <div
+          id="aiHeaderStatus"
+          class="aiSubtitle"
+        >
+          Ready to help
+        </div>
+
+      </div>
+
+    </div>
+
+    <button id="aiCloseBtn">
+      ×
+    </button>
+
+  </div>
+
+
+  <!-- BODY -->
+
+  <div class="aiBody">
+
+    <div class="aiMainIcon">
+      🎙️
+    </div>
+
+    <h3>
+      Talk to our AI Assistant
+    </h3>
+
+    <p class="aiDescription">
+      Get instant assistance by speaking
+      directly with our AI receptionist.
+    </p>
+
+
+    <!-- STATUS -->
+
+    <div class="aiStatus">
+
+      <span id="aiStatusDot"></span>
+
+      <span id="aiStatusText">
+        Ready to call
+      </span>
+
+    </div>
+
+
+    <!-- VOICE ANIMATION -->
+
+    <div id="aiVoiceBars">
+
+      <span class="aiBar"></span>
+      <span class="aiBar"></span>
+      <span class="aiBar"></span>
+      <span class="aiBar"></span>
+      <span class="aiBar"></span>
+
+    </div>
+
+
+    <!-- BROWSER CALL -->
+
+    <button
+      id="aiStartCall"
+      class="aiButton"
+    >
+      🎙️ Start Call Online
+    </button>
+
+
+    <button
+      id="aiEndCall"
+      class="aiButton"
+    >
+      ☎ End Call
+    </button>
+
+
+    <!-- DIVIDER -->
+
+    <div class="aiDivider">
+      OR CALL BY PHONE
+    </div>
+
+
+    <!-- PHONE NUMBER -->
+
+    <div class="aiPhoneBox">
+
+      <div class="aiPhoneLabel">
+        Call our AI support assistant
+      </div>
+
+      <a
+        class="aiPhoneNumber"
+        href="tel:+18312152369"
+      >
+        +1 831 215 2369
+      </a>
+
+      <a
+        id="aiPhoneCallBtn"
+        href="tel:+18312152369"
+      >
+        📞 Call +1 831 215 2369
+      </a>
+
+    </div>
+
+
+    <div class="aiHint">
+      You can also drag the support button anywhere
+      on the screen.
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     ELEVENLABS JAVASCRIPT SDK
+========================================================= -->
+
+<script type="module">
+
+  import {
+    Conversation
+  } from
+  "https://cdn.jsdelivr.net/npm/@elevenlabs/client/+esm";
+
+
+  /* ========================================================
+     CONFIG
+  ======================================================== */
+
+  const AGENT_ID =
+    "agent_6101m1e66123fff825ccasvj6wbw";
+
+  const PHONE_NUMBER =
+    "+18312152369";
+
+
+  let conversation = null;
+
+
+  /* ========================================================
+     ELEMENTS
+  ======================================================== */
+
+  const launcher =
+    document.getElementById(
+      "aiSupportLauncher"
+    );
+
+  const panel =
+    document.getElementById(
+      "aiSupportPanel"
+    );
+
+  const closeBtn =
+    document.getElementById(
+      "aiCloseBtn"
+    );
+
+  const startBtn =
+    document.getElementById(
+      "aiStartCall"
+    );
+
+  const endBtn =
+    document.getElementById(
+      "aiEndCall"
+    );
+
+  const statusText =
+    document.getElementById(
+      "aiStatusText"
+    );
+
+  const statusDot =
+    document.getElementById(
+      "aiStatusDot"
+    );
+
+  const headerStatus =
+    document.getElementById(
+      "aiHeaderStatus"
+    );
+
+  const voiceBars =
+    document.getElementById(
+      "aiVoiceBars"
+    );
+
+
+  /* ========================================================
+     OPEN / CLOSE
+  ======================================================== */
+
+  launcher.addEventListener(
+    "click",
+    () => {
+
+      if (launcher.dataset.dragged === "true") {
+
+        launcher.dataset.dragged = "false";
+
+        return;
+      }
+
+      panel.style.display =
+        panel.style.display === "block"
+          ? "none"
+          : "block";
+
+    }
+  );
+
+
+  closeBtn.addEventListener(
+    "click",
+    () => {
+
+      panel.style.display =
+        "none";
+
+    }
+  );
+
+
+  /* ========================================================
+     STATUS
+  ======================================================== */
+
+  function setStatus(
+    message,
+    state = ""
+  ) {
+
+    statusText.textContent =
+      message;
+
+    headerStatus.textContent =
+      message;
+
+    statusDot.className = "";
+
+    if (state) {
+      statusDot.classList.add(
+        state
+      );
+    }
+
+  }
+
+
+  /* ========================================================
+     START ONLINE CALL
+  ======================================================== */
+
+  async function startCall() {
+
+    try {
+
+      startBtn.disabled =
+        true;
+
+      setStatus(
+        "Requesting microphone..."
+      );
+
+
+      await navigator
+        .mediaDevices
+        .getUserMedia({
+          audio: true
+        });
+
+
+      setStatus(
+        "Connecting..."
+      );
+
+
+      conversation =
+        await Conversation.startSession({
+
+          agentId: AGENT_ID,
+
+
+          onConnect: () => {
+
+            setStatus(
+              "Connected — listening",
+              "connected"
+            );
+
+            startBtn.style.display =
+              "none";
+
+            endBtn.style.display =
+              "block";
+
+            voiceBars.style.display =
+              "flex";
+
+          },
+
+
+          onDisconnect: () => {
+
+            conversation =
+              null;
+
+            setStatus(
+              "Call ended"
+            );
+
+            startBtn.style.display =
+              "block";
+
+            startBtn.disabled =
+              false;
+
+            endBtn.style.display =
+              "none";
+
+            voiceBars.style.display =
+              "none";
+
+          },
+
+
+          onError: (error) => {
+
+            console.error(
+              "AI error:",
+              error
+            );
+
+            conversation =
+              null;
+
+            setStatus(
+              "Connection error"
+            );
+
+            startBtn.style.display =
+              "block";
+
+            startBtn.disabled =
+              false;
+
+            endBtn.style.display =
+              "none";
+
+            voiceBars.style.display =
+              "none";
+
+          },
+
+
+          onModeChange: ({
+            mode
+          }) => {
+
+            if (
+              mode === "speaking"
+            ) {
+
+              setStatus(
+                "AI is speaking...",
+                "speaking"
+              );
+
+            } else {
+
+              setStatus(
+                "Listening...",
+                "connected"
+              );
+
+            }
+
+          }
+
+        });
+
+    } catch (error) {
+
+      console.error(
+        "Could not start call:",
+        error
+      );
+
+      setStatus(
+        "Microphone permission required"
+      );
+
+      startBtn.disabled =
+        false;
+
+    }
+
+  }
+
+
+  /* ========================================================
+     END ONLINE CALL
+  ======================================================== */
+
+  async function endCall() {
+
+    if (!conversation) {
+      return;
+    }
+
+    try {
+
+      setStatus(
+        "Ending call..."
+      );
+
+      await conversation.endSession();
+
+      conversation =
+        null;
+
+    } catch (error) {
+
+      console.error(
+        "Could not end call:",
+        error
+      );
+
+    }
+
+  }
+
+
+  startBtn.addEventListener(
+    "click",
+    startCall
+  );
+
+  endBtn.addEventListener(
+    "click",
+    endCall
+  );
+
+
+  /* ========================================================
+     DRAGGABLE BUTTON
+  ======================================================== */
+
+  let dragging = false;
+
+  let moved = false;
+
+  let offsetX = 0;
+
+  let offsetY = 0;
+
+
+  function beginDrag(
+    x,
+    y
+  ) {
+
+    dragging = true;
+
+    moved = false;
+
+    const rect =
+      launcher.getBoundingClientRect();
+
+    offsetX =
+      x - rect.left;
+
+    offsetY =
+      y - rect.top;
+
+
+    launcher.style.left =
+      rect.left + "px";
+
+    launcher.style.top =
+      rect.top + "px";
+
+    launcher.style.right =
+      "auto";
+
+    launcher.style.bottom =
+      "auto";
+
+  }
+
+
+  function dragMove(
+    x,
+    y
+  ) {
+
+    if (!dragging) {
+      return;
+    }
+
+    moved = true;
+
+
+    let newX =
+      x - offsetX;
+
+    let newY =
+      y - offsetY;
+
+
+    const maxX =
+      window.innerWidth -
+      launcher.offsetWidth;
+
+    const maxY =
+      window.innerHeight -
+      launcher.offsetHeight;
+
+
+    newX =
+      Math.max(
+        5,
+        Math.min(
+          newX,
+          maxX - 5
+        )
+      );
+
+    newY =
+      Math.max(
+        5,
+        Math.min(
+          newY,
+          maxY - 5
+        )
+      );
+
+
+    launcher.style.left =
+      newX + "px";
+
+    launcher.style.top =
+      newY + "px";
+
+  }
+
+
+  function finishDrag() {
+
+    if (!dragging) {
+      return;
+    }
+
+    dragging = false;
+
+    if (moved) {
+
+      launcher.dataset.dragged =
+        "true";
+
+    }
+
+  }
+
+
+  /* MOUSE */
+
+  launcher.addEventListener(
+    "mousedown",
+    (event) => {
+
+      beginDrag(
+        event.clientX,
+        event.clientY
+      );
+
+    }
+  );
+
+
+  document.addEventListener(
+    "mousemove",
+    (event) => {
+
+      dragMove(
+        event.clientX,
+        event.clientY
+      );
+
+    }
+  );
+
+
+  document.addEventListener(
+    "mouseup",
+    finishDrag
+  );
+
+
+  /* TOUCH */
+
+  launcher.addEventListener(
+    "touchstart",
+    (event) => {
+
+      const touch =
+        event.touches[0];
+
+      beginDrag(
+        touch.clientX,
+        touch.clientY
+      );
+
+    },
+    {
+      passive: true
+    }
+  );
+
+
+  document.addEventListener(
+    "touchmove",
+    (event) => {
+
+      if (!dragging) {
+        return;
+      }
+
+      const touch =
+        event.touches[0];
+
+      dragMove(
+        touch.clientX,
+        touch.clientY
+      );
+
+    },
+    {
+      passive: true
+    }
+  );
+
+
+  document.addEventListener(
+    "touchend",
+    finishDrag
+  );
+
+</script>
     <!-- Interactive Background Canvas -->
     <canvas id="cyber-canvas"></canvas>
     
